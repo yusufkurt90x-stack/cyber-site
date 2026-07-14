@@ -1,15 +1,3 @@
-// components/ui/Section.tsx
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-
-export default function Section({ children, className, id }: { children: React.ReactNode, className?: string, id?: string }) {
-  return (
-    <section id={id} className={cn("py-20 relative", className)}>
-      {children}
-    </section>
-  );
+export default function Section({ children, className = "" }: { children: React.ReactNode, className?: string }) {
+  return <section className={`py-20 px-8 ${className}`}>{children}</section>;
 }
