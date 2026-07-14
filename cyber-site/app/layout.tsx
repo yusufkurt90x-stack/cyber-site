@@ -1,27 +1,23 @@
 "use client";
 
-// app/layout.tsx
-import "../app/globals.css";
-import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import "./globals.css";
+import RootClient from "../components/RootClient";
 
 export const metadata = {
-  title: "Cyber Portfolio",
-  description: "Cyber security portfolio",
+  title: "INTEL_OS | SİBER GÜVENLİK",
+  description: "Operations Center Portfolyo",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr">
-      <body className="bg-[#050505] text-white">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+        <RootClient>{children}</RootClient>
       </body>
     </html>
   );
 }
+
 
 
 export default function RootLayout({
